@@ -1,0 +1,163 @@
+1. Test Cases for Sign Up
+Test Case ID: SIGNUP_TC_01
+Test Case Name: Verify that the Sign-Up form is accessible
+Test Steps:
+
+Navigate to https://testffc.nimapinfotech.com/
+Click on the 'Sign Up' link
+Expected Result: Sign-Up form is displayed
+Test Case ID: SIGNUP_TC_02
+Test Case Name: Verify mandatory fields on Sign-Up form
+Test Steps:
+
+Navigate to the 'Sign Up' form
+Try to submit the form without filling any fields
+Expected Result: Validation messages should appear for mandatory fields
+Test Case ID: SIGNUP_TC_03
+Test Case Name: Verify the Sign-Up with valid details
+Test Steps:
+
+Fill in valid details in all fields
+Click 'Submit'
+Expected Result: User should be successfully registered and redirected to the login page
+Test Case ID: SIGNUP_TC_04
+Test Case Name: Verify Sign-Up with invalid email format
+Test Steps:
+
+Enter an invalid email address
+Fill other fields with valid data
+Click 'Submit'
+Expected Result: Validation message for the email field should appear
+Test Case ID: SIGNUP_TC_05
+Test Case Name: Verify password strength validation
+Test Steps:
+
+Enter a weak password
+Fill other fields with valid data
+Click 'Submit'
+Expected Result: Validation message indicating password strength should appear
+2. Test Cases for Forgot Password
+Test Case ID: FORGOTPWD_TC_01
+Test Case Name: Verify accessibility of Forgot Password form
+Test Steps:
+
+Navigate to https://testffc.nimapinfotech.com/
+Click on 'Forgot Password' link
+Expected Result: Forgot Password form is displayed
+Test Case ID: FORGOTPWD_TC_02
+Test Case Name: Verify Forgot Password with valid email
+Test Steps:
+
+Enter a registered email address
+Click 'Submit'
+Expected Result: A password reset email should be sent to the entered email address
+Test Case ID: FORGOTPWD_TC_03
+Test Case Name: Verify Forgot Password with unregistered email
+Test Steps:
+
+Enter an unregistered email address
+Click 'Submit'
+Expected Result: Appropriate error message should appear
+Test Case ID: FORGOTPWD_TC_04
+Test Case Name: Verify email format validation in Forgot Password
+Test Steps:
+
+Enter an invalid email address format
+Click 'Submit'
+Expected Result: Validation message for the email field should appear
+3. Test Cases for Sign with OTP
+Test Case ID: SIGNOTP_TC_01
+Test Case Name: Verify accessibility of Sign with OTP form
+Test Steps:
+
+Navigate to https://testffc.nimapinfotech.com/
+Click on 'Sign with OTP' link
+Expected Result: Sign with OTP form is displayed
+Test Case ID: SIGNOTP_TC_02
+Test Case Name: Verify Sign with OTP using registered phone number
+Test Steps:
+
+Enter a registered phone number
+Click 'Send OTP'
+Enter the received OTP
+Click 'Submit'
+Expected Result: User should be logged in successfully
+Test Case ID: SIGNOTP_TC_03
+Test Case Name: Verify Sign with OTP using unregistered phone number
+Test Steps:
+
+Enter an unregistered phone number
+Click 'Send OTP'
+Expected Result: Appropriate error message should appear
+Test Case ID: SIGNOTP_TC_04
+Test Case Name: Verify invalid OTP entry
+Test Steps:
+
+Enter a registered phone number
+Click 'Send OTP'
+Enter an invalid OTP
+Click 'Submit'
+Expected Result: Appropriate error message should appear
+4. Test Cases for Login
+Test Case ID: LOGIN_TC_01
+Test Case Name: Verify that the login form is accessible
+Test Steps:
+
+Navigate to https://testffc.nimapinfotech.com/
+Click on 'Login' link
+Expected Result: Login form is displayed
+Test Case ID: LOGIN_TC_02
+Test Case Name: Verify login with valid credentials
+Test Steps:
+
+Enter valid username and password
+Click 'Submit'
+Expected Result: User should be successfully logged in
+Test Case ID: LOGIN_TC_03
+Test Case Name: Verify login with invalid credentials
+Test Steps:
+
+Enter invalid username and/or password
+Click 'Submit'
+Expected Result: Appropriate error message should appear
+Test Case ID: LOGIN_TC_04
+Test Case Name: Verify login with empty fields
+Test Steps:
+
+Click 'Submit' without entering username and password
+Expected Result: Validation messages for the fields should appear
+2. Validation for Each Field
+Sign Up
+Username: Should be a valid email format.
+Password: Should meet the required strength (e.g., minimum 8 characters, include uppercase, lowercase, number, special character).
+Confirm Password: Should match the password field.
+Phone Number: Should be a valid phone number format.
+Forgot Password
+Email: Should be a valid registered email format.
+Sign with OTP
+Phone Number: Should be a valid registered phone number format.
+OTP: Should be a valid numeric code sent to the user's phone.
+Login
+Username: Should be a valid registered email.
+Password: Should match the password stored in the database for the given username.
+3. Bugs Found
+As the URL provided is a hypothetical test URL, I can't perform actual testing to find real bugs. However, here are some potential issues you might encounter:
+
+Sign Up:
+
+Validation messages do not appear for mandatory fields.
+Weak passwords are accepted without warning.
+Email format validation is not functioning correctly.
+Confirm Password field does not match the Password field.
+Forgot Password:
+
+Unregistered emails do not trigger an error message.
+Invalid email formats are accepted without validation.
+Sign with OTP:
+
+Unregistered phone numbers do not trigger an error message.
+Invalid OTP does not trigger an error message.
+Login:
+
+Invalid credentials do not trigger an appropriate error message.
+Login form allows submission with empty fields.
